@@ -8,6 +8,11 @@ class TestSuite(unittest.TestCase):
         password = ""
         self.assertFalse(check_pwd(password))
 
+    # string of length 7, should fail
+    def test2(self):
+        password = "1234567"
+        self.assertFalse(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
