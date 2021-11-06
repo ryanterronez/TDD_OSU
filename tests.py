@@ -48,7 +48,5 @@ class TestSuite(unittest.TestCase):
         self.assertFalse(check_pwd(password))
 
 
-
-
 if __name__ == '__main__':
     unittest.main()
