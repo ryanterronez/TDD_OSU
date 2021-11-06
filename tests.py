@@ -23,6 +23,11 @@ class TestSuite(unittest.TestCase):
         password = "12345678"
         self.assertFalse(check_pwd(password))
 
+    # string within range, with lowercase letters and no upper case letters, should fail:
+    def test5(self):
+        password = "12345678a"
+        self.assertFalse(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
