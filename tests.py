@@ -18,6 +18,11 @@ class TestSuite(unittest.TestCase):
         password = "123451234512345123451"
         self.assertFalse(check_pwd(password))
 
+    # no lowercase letters, should fail
+    def test4(self):
+        password = "12345678"
+        self.assertFalse(check_pwd(password))
+
 
 if __name__ == '__main__':
     unittest.main()
