@@ -16,7 +16,12 @@ class TestSuite(unittest.TestCase):
     # string of length 21, should fail
     def test3(self):
         password = "123451234512345123451"
-        self. assertFalse(check_pwd(password))
+        self.assertFalse(check_pwd(password))
+
+    # string within range with no lowercase letters, should fail
+    def test4(self):
+        password = "12345678"
+        self.assertFalse(check_pwd(password))
 
 
 if __name__ == '__main__':
