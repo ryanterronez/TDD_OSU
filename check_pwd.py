@@ -1,4 +1,7 @@
 def check_pwd(password):
-    return True
+    if password == "":
+        return False
+    else:
+        return True
 
 
