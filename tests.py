@@ -43,9 +43,14 @@ class TestSuite(unittest.TestCase):
     # string within range, with lowercase and uppercase
     # letters, with digit, with approved symbol,
     # with unapproved symbol, should fail:
-    def test(self):
+    def test8(self):
         password = "NoSymbols10$%|"
         self.assertFalse(check_pwd(password))
+
+    # should pass:
+    def test9(self):
+        password = "ValidPassword1!"
+        self.assertTrue(check_pwd(password))
 
 
 if __name__ == '__main__':
